@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="bg-warning">
+    <div class="container ">
+      <div class="row">
+        <div class="form-group w-50 col-5">
+          <label for=""></label>
+          <input
+            type="number"
+            class="form-control"
+            id="number"
+            placeholder=""
+          />
+        </div>
+        <button onclick="themSo()" class="btn btn-primary my-3 col-2">
+          Thêm số
+        </button>
+      </div>
+      <p class="alert alert-success">
+        <i class="fa-regular fa-hand-point-right"></i>
+        <span id="numberArray"></span>
+      </p>
+        <div id="accordion">
+          <div class="step1">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    1: TỔNG SỐ DƯƠNG
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample1">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="tinhTong()" >
+                      Kết quả
+                    </button>
+                    <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result1"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step2">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    2: ĐẾM SỐ DƯƠNG
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="demSoDuong()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result2"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step3">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    3: TÌM SỐ NHỎ NHẤT
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="timSoNhoNhat()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result3"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step4">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    4: TÌM SỐ DƯƠNG NHỎ NHẤT
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample4">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="timSoDuongNhoNhat()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result4"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step5">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    5: TÌM SỐ CHẴN CUỐI CÙNG
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample5">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="timSoChanCuoiCung()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result5"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step6">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    6: ĐỔI CHỖ
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample6">
+                <div class="card card-body">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="form-group col-6">
+                            <label for=""></label>
+                            <input type="number" class="form-control" id="viTri1" placeholder="Nhập số vị trí 1" />
+                          </div>
+                      <div class="form-group col-6">
+                            <label for=""></label>
+                            <input type="number" class="form-control" id="viTri2" placeholder="Nhập số vị trí 1" />
+                          </div>
+                    </div>
+                  </div>
+                    <button class="btn btn-success mb-3 w-25" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="doiCho()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result6"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step7">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    7: SẮP XẾP TĂNG DẦN
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample7">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="sapXepTangDan()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result7"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step8">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    8: TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample8">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="timSoNguyenToDauTien()" >
+                      Kết quả
+                    </button>
+                       <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result8"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step9">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    9: ĐẾM SỐ NGUYÊN
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample9">
+                <div class="card card-body">
+                  <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" class="form-control" id="nhapSo" placeholder="Nhập số" />
+                      </div>
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="demSoNguyen()" >
+                      Kết quả
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result9"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        <div class="step10">
+            <p>
+                <a class="btn btn-light text-left text-danger rounded w-100 border border-danger " data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    10: SO SÁNH LUỌNG SỐ ÂM VÀ DƯƠNG
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample10">
+                <div class="card card-body">
+                    <button class="btn btn-success mb-3 w-25 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    onclick="soSangLuongSoAmVaDuong()" >
+                      So Sánh
+                    </button>
+                      <p class="alert alert-success">
+                        <i class="fa-regular fa-hand-point-right"></i>
+                        <span id="result10"></span>
+                      </p>
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>
+
+      
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
